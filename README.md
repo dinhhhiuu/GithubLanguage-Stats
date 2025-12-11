@@ -1,1 +1,1 @@
-![Local Test](http://localhost:3000/lang/{username})
+- Local Test: http://localhost:3000/lang/{username}

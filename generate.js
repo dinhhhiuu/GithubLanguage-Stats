@@ -17,7 +17,7 @@ async function githubFetch(url) {
   return fetch(url, {
     headers: {
       "User-Agent": "lang-stats",
-      "Authorization": `Bearer ${process.env.GITHUB_TOKEN}`
+      "Authorization": `Bearer ${process.env.GH_TOKEN}`
     }
   }).then(r => r.json());
 }
