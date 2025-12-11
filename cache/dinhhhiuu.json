@@ -1,0 +1,8 @@
+{
+  "timestamp": 1765464290272,
+  "data": {
+    "barSegments": "<rect x=\"0\" y=\"0\" width=\"155.63684283987985\" height=\"20\" fill=\"#3178c6\" /><rect x=\"155.63684283987985\" y=\"0\" width=\"34.01193824904843\" height=\"20\" fill=\"#6cc24a\" /><rect x=\"189.64878108892827\" y=\"0\" width=\"32.776491683841364\" height=\"20\" fill=\"#663399\" /><rect x=\"222.42527277276963\" y=\"0\" width=\"30.65454147642466\" height=\"20\" fill=\"#3572a5\" /><rect x=\"253.0798142491943\" y=\"0\" width=\"29.10033083561456\" height=\"20\" fill=\"#f0db4f\" /><rect x=\"282.1801450848089\" y=\"0\" width=\"13.423551321016172\" height=\"20\" fill=\"#b07219\" /><rect x=\"295.6036964058251\" y=\"0\" width=\"3.2940211930955825\" height=\"20\" fill=\"#c6538c\" /><rect x=\"298.8977175989207\" y=\"0\" width=\"1.1022824010793968\" height=\"20\" fill=\"#e34c26\" />",
+    "leftLabels": "<text x=\"0\" y=\"20\" fill=\"#3178c6\">● TypeScript: 51.9%</text><text x=\"0\" y=\"40\" fill=\"#6cc24a\">● C#: 11.3%</text><text x=\"0\" y=\"60\" fill=\"#663399\">● CSS: 10.9%</text><text x=\"0\" y=\"80\" fill=\"#3572a5\">● Python: 10.2%</text>",
+    "rightLabels": "<text x=\"160\" y=\"20\" fill=\"#f0db4f\">● JavaScript: 9.7%</text><text x=\"160\" y=\"40\" fill=\"#b07219\">● Java: 4.5%</text><text x=\"160\" y=\"60\" fill=\"#c6538c\">● SCSS: 1.1%</text><text x=\"160\" y=\"80\" fill=\"#e34c26\">● HTML: 0.4%</text>"
+  }
+}
