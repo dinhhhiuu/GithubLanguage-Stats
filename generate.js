@@ -17,7 +17,7 @@ async function githubFetch(url) {
   return fetch(url, {
     headers: {
       "User-Agent": "lang-stats",
-      "Authorization": `Bearer ${process.env.GH_TOKEN}`
+      "Authorization": `Bearer ${process.env.GITHUB_TOKEN}`
     }
   }).then(r => r.json());
 }
@@ -98,4 +98,4 @@ async function generate(username) {
   saveSVG(username, svg);
 }
 
-generate("dinhhhiuu"); 
+generate(process.env.GH_USERNAME);

@@ -2,33 +2,38 @@ name: Daily SVG Update
 
 on:
   schedule:
-    - cron: "0 0 * * *" # chạy mỗi ngày 0h00
-  workflow_dispatch: # chạy thủ công
+    - cron: "0 0 * * *" # It runs every day at 00:00 UTC.
+  workflow_dispatch: # Allows manual operation
+
+permissions:
+  contents: write 
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
       - name: Setup NodeJS
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      - name: Install deps
+      - name: Install dependencies
         run: npm install
 
       - name: Generate SVG
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # Actions' public token
+          GH_USERNAME: ${{ secrets.GH_USERNAME }}
         run: node generate.js
 
-      - name: Commit changes
+      - name: Commit & push SVG
         run: |
-          git config user.name "GitHub Actions"
-          git config user.email "github-actions@users.noreply.github.com"
-          git add .
-          git commit -m "Daily SVG update" || echo "No changes"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/*.svg
+          git commit -m "Bot Github: Daily SVG update" || echo "No changes"
           git push
